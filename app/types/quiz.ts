@@ -1,7 +1,7 @@
 export type Difficulty = 'Easy' | 'Medium' | 'Hard';
 
-export type Category = 'Linux' | 'Programming' | 'General Knowledge' | 'Science';
-
+// In app/types/quiz.ts
+export type Category = 'Linux' | 'Programming' | 'DevOps' | 'Docker' | 'SQL' | 'CMS' | 'Code';
 export interface Answer {
   text: string;
   isCorrect: boolean;

@@ -15,8 +15,8 @@ import { fetchQuestions } from '../utils/api';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function QuizScreen() {
-  const { category } = useLocalSearchParams<{ category: Category }>();
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const params = useLocalSearchParams<{ category: Category }>();
+  const category = params.category || 'Linux'; // Default to Linux category  const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
   const [timeLeft, setTimeLeft] = useState(30);
